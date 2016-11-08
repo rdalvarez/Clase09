@@ -16,7 +16,6 @@ class Cd
 		$consulta = $objetoAccesoDato->RetornarConsulta($sql);
 		$consulta->execute();
 
-		return $consulta->fetchall(PDO::FETCH_CLASS, "Cd");
-		
+		return $consulta->fetchall();		
 	}
 }

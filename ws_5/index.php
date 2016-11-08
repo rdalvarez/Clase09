@@ -30,8 +30,9 @@
 		require_once('AccesoDatos.php');
 		require_once('Cd.php');
 
-		$host = 'http://localhost/Ejemplos/2016/clase11/ws_5/SERVIDOR/ws.php';
-		
+		//$host = 'http://localhost/Ejemplos/2016/clase11/ws_5/SERVIDOR/ws.php';
+		$host = 'http://localhost:8080/php/clase11/ws_5/SERVIDOR/ws.php';
+
 		$client = new nusoap_client($host . '?wsdl');
 
 		$err = $client->getError();
