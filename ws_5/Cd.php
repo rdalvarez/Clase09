@@ -1,4 +1,5 @@
 <?php
+require_once('AccesoDatos.php');
 class Cd
 {
 	public $id;
@@ -16,6 +17,7 @@ class Cd
 		$consulta = $objetoAccesoDato->RetornarConsulta($sql);
 		$consulta->execute();
 
+		//return $consulta->fetchall(PDO::FETCH_CLASS, "Cd"); //DA ERROR
 		return $consulta->fetchall();		
 	}
 }
